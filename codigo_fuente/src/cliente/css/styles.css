@@ -1,0 +1,8 @@
+table td,
+table th {
+    vertical-align: middle;
+}
+
+#tabla-clientes .btn-sm {
+    min-width: 70px;
+}
