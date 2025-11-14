@@ -2,7 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const clientesRoutes = require('./routes/clientesRoutes')
 const path = require('path')
-process.loadEnvFile()
+// process.loadEnvFile()
 
 const app = express()
 const PORT = process.env.PORT || 8080
