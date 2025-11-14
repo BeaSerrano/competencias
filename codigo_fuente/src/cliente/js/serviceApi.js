@@ -1,4 +1,5 @@
-const API_BASE = 'http://localhost:8080/api';
+const API_LOCAL = 'http://localhost:8080/api';
+const API_BASE = 'https://gestion-clientes-ywnc.onrender.com/api'
 
 // manejo respuestas
 const handleRes = async (res) => {
