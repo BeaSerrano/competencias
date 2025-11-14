@@ -1,5 +1,5 @@
 const mysql = require('mysql2/promise');
-process.loadEnvFile()
+// process.loadEnvFile()
 
 class Database {
     constructor() {
