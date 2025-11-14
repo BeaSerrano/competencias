@@ -1,5 +1,6 @@
-const API_BASE = 'http://localhost:3000/api';
+const API_BASE = 'http://localhost:8080/api';
 
+// manejo respuestas
 const handleRes = async (res) => {
     let data = null;
     
@@ -19,6 +20,7 @@ const handleRes = async (res) => {
     return data;
 }
 
+// llamada - clientes y clientes por id - GET
 const apiFetchClientes = async (busqueda = '') => {
     const url = busqueda
         ? `${API_BASE}/clientes?busqueda=${encodeURIComponent(busqueda)}`
@@ -26,9 +28,10 @@ const apiFetchClientes = async (busqueda = '') => {
 
     const res = await fetch(url);
     const data = await handleRes(res);
-    return data.map((el) => new window.Client(el));
+    return data.map((el) => new window.Cliente(el));
 }
 
+// llamada - crear cliente - POST
 const apiCreateCliente = async (payload) => {
     const res = await fetch(`${API_BASE}/clientes`, {
         method: 'POST',
@@ -40,6 +43,7 @@ const apiCreateCliente = async (payload) => {
     return new window.Cliente(data);
 }
 
+// llamada - modificar cliente - PUT
 const apiUpdateCliente = async (id, payload) => {
     const res = await fetch(`${API_BASE}/clientes/${id}`, {
         method: 'PUT',
@@ -51,6 +55,7 @@ const apiUpdateCliente = async (id, payload) => {
     return new window.Cliente(data);
 }
 
+// llamada eliminar cliente - DELTE
 const apiDeleteCliente = async (id) => {
     const res = await fetch(`${API_BASE}/clientes/${id}`, {
         method: 'DELETE',

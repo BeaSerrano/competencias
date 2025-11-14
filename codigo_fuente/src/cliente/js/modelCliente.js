@@ -25,4 +25,4 @@ class Cliente {
 }
 
 
-window.Client = Cliente;
+window.Cliente = Cliente;

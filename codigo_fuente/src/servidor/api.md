@@ -1,7 +1,5 @@
 # 📚 Documentación de la API -- Gestión de Clientes (Node.js + Express + MySQL)
 
-## 📝 Descripción del proyecto
-
 Este proyecto implementa una API REST para la gestión de clientes, utilizando:
 
 -   **Node.js**
@@ -14,26 +12,20 @@ La API permite realizar operaciones CRUD completas: **leer, buscar, crear, actua
 
 ------------------------------------------------------------------------
 
-## 🏠 Estructura del proyecto
+## 🏠 Estructura del servidor
 
-    codigo_fuente/
-      src/
-        db/
-          db.sql
-        servidor/
-          app.js
-          config/
-            db.js
-          models/
-            Cliente.js
-          controllers/
-            clientesController.js
-          routes/
-            clientesRoutes.js
-          api.md
-        cliente/
-          (a desarrollar)
-        README.md
+```
+servidor/
+  app.js
+  config/
+    db.js
+  models/
+    Cliente.js
+  controllers/
+    clientesController.js
+  routes/
+    clientesRoutes.js
+```
 
 ------------------------------------------------------------------------
 

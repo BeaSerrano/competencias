@@ -20,3 +20,18 @@ Incluye arquitectura **MVC**, programación orientada a objetos (POO), cliente c
 - CSS3  
 - JavaScript (Fetch API)
 - React
+
+## 📡 Funcionalidades principales
+
+- Listado de clientes  
+- Búsqueda por cliente
+- Creación, edición y eliminación de cliente
+- Validaciones de formulario
+- Alertas y mensajes
+- Indicadores de carga
+- BBDD en MySQL
+
+## 📄 Documentación incluida
+
+- **api.md** → Documentación del backend  
+- **cliente.md** → Documentación del frontend  
