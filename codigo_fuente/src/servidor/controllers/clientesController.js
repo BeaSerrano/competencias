@@ -6,6 +6,12 @@ const validarEmail = (email)  => {
     return regex.test(String(email).toLowerCase())
 }
 
+// validación teléfono España
+const validarTelefono = (telefono) => {
+    const regex = /^(\+34)?[\d\s-]{9,15}$/
+    return regex.text(String(telefono).toLowerCase())
+}
+
 // controlador cliente
 class ClientesController {
     static async traerClientes(req, res) {
@@ -47,6 +53,10 @@ class ClientesController {
                 return res.status(400).json({ error: 'El campo email no es válido' })
             }
 
+            if(!validarTelefono(telefono)) {
+                return res.status(400).json({ error: 'El campo teléfono no es válido' })
+            }
+
             const emailExiste = await Cliente.encontrarClientePorEmail(email)
             
             if (emailExiste) {
@@ -80,6 +90,10 @@ class ClientesController {
 
             if (!validarEmail(email)) {
                 return res.status(400).json({ error: 'El email no es válido' })
+            }
+
+            if(!validarTelefono(telefono)) {
+                return res.status(400).json({ error: 'El campo teléfono no es válido' })
             }
 
             const emailExiste = await Cliente.encontrarClientePorEmail(email)
