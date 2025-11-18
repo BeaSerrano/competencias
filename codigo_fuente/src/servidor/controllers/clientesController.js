@@ -9,7 +9,7 @@ const validarEmail = (email)  => {
 // validación teléfono España
 const validarTelefono = (telefono) => {
     const regex = /^(\+34)?[\d\s-]{9,15}$/
-    return regex.text(String(telefono).toLowerCase())
+    return regex.test(String(telefono).toLowerCase())
 }
 
 // controlador cliente
