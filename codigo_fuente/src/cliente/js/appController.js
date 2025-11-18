@@ -59,6 +59,11 @@ document.addEventListener('DOMContentLoaded', () => {
     return regex.test(String(email).toLowerCase())
   }
 
+  const validarTelefono = (telefono) => {
+    const regex = /^(\+34)?[\d\s-]{9,15}$/
+    return regex.text(String(telefono).toLowerCase())
+  }
+
   // tabla clientes
   const mostrarTablaClientes = () => {
     bodyTablaClientes.innerHTML = ''
@@ -155,6 +160,13 @@ document.addEventListener('DOMContentLoaded', () => {
       valid = false
     } else {
       emailInput.classList.remove('is-invalid')
+    }
+
+    if (!telefonoInput.value.trim() || !validarTelefono(telefonoInput.value)) {
+      telefonoInput.classList.add('is-invalid')
+      valid = false
+    } else {
+      telefonoInput.classList.remove('is-invalid')
     }
 
     if (!valid) return
@@ -272,6 +284,13 @@ document.addEventListener('DOMContentLoaded', () => {
       valid = false
     } else {
       editarEmailInput.classList.remove('is-invalid')
+    }
+
+    if (!telefonoInput.value.trim() || !validarTelefono(telefonoInput.value)) {
+      telefonoInput.classList.add('is-invalid')
+      valid = false
+    } else {
+      telefonoInput.classList.remove('is-invalid')
     }
 
     if (!valid) return
